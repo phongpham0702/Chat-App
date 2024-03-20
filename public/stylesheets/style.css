@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Signika:wght@400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html, body{
+  width: 100vw;
+  height: 100%;
+  /* overflow-x: hidden; */
+}
+
+.navbar.navbar-default{
+  background-color: #d3fffba6;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.lobby{  
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.wallpaper{
+    background-image: url('/images/wallpaper.gif');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+.card{
+  border:1px solid rgb(0 0 0 / 55%);
+}
+
+.visibleOn{
+  visibility: visible !important;
+}
+
+.card-header{
+  border-bottom: 1px solid rgb(0 0 0 / 55%);
+  background-color: rgb(135 245 255 / 50%);
+  height: 55px;
+  visibility: hidden;
+}
+
+.card-footer{
+  border-top: 1px solid rgb(0 0 0 / 55%);
+  visibility: hidden;
+}
+
+.view-history {
+    height: 450px;
+    overflow-y: auto;
+}
+
+#user-list{
+  height: 100%;
+  border:1px solid rgb(0 0 0 / 55%);
+  border-radius: 5px;
+}
+
+#user-list h4{
+  background-color:rgb(135 245 255 / 50%);
+  padding: 0.75rem 1.25rem;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid rgb(0 0 0 / 55%);
+  height: 55px;
+}
+
+/* Style for outgoing messages */
+.message.outgoing p {
+    /* background-color: #F0F0F0; */
+    background-color: #00C6FF;
+    color: #fff;
+}
+
+.messages{
+  height: 100%;
+  width: 100%;
+}
+/* Style for incoming messages */
+.message.incoming p {
+    background-color: #F0F0F0;
+    color: #000;
+}
+
+/* Common style for message content and timestamp */
+.message p,
+.message .time {
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+
+/* Style for timestamp */
+.message .time {
+    font-size: 0.8rem;
+    color: #999;
+    margin-left: 10px;
+}
+
+/* Align incoming messages to the left */
+.message.incoming {
+    display: flex;
+    align-items: flex-end;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.message.incoming p {
+    border-top-left-radius: 0;
+}
+
+/* Align outgoing messages to the right */
+.message.outgoing {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.message.outgoing p {
+    border-top-right-radius: 0;
+}
+
+.messages .noUserSelected{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.list-group-item{
+    border: none;
+    border-radius: 10px;
+
+}
+
+.list-group-item a img{
+  width: 30px;
+  height: 30px;
+}
+
+li.list-group-item{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #d3fffba6;
+  border-radius: unset !important;
+  cursor: pointer;
+}
+
+li.list-group-item .messageCounter
+{
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background-color: #ff5b5b;
+  font-weight: 700;
+  border-radius: 99%;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+}
+
+#chat-panel .card-header a img{
+  width: 30px;
+  height: 30px;
+}
+
+.input-message{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.input-message .form-group{
+  margin: 0;
+}
+
+.input-message .form-group.typing-message{
+  width: 100% !important;
+}
+
+.input-message .form-group.typing-message input[type="text"]::placeholder{
+  text-align: right;
+}
+
+
+
+/* Login Page */
+
+.form-container{
+  overflow-x: hidden;
+    background-color: #d3fffba6;
+    font-family: 'Signika', sans-serif;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.form-container form{
+    width: 100%;
+    padding: 1.5rem;
+}
+.form-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.form-container button[type="submit"] {
+    
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+      
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.form-container input#username{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container .form-group {
+    margin-bottom: 10px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 200px;
+}
+
+  .swiper-slide {
+    visibility: hidden;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .swiper-slide.swiper-slide-active{
+    visibility: visible !important;
+    
+  }
+
+  .picture {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 5px;
+    border: 2px solid gray;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .picture input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .picture input[type="radio"]:checked + img {
+    padding: 3px;
+    border: 3px solid #00fff8;
+    border-radius: 100px;
+  }
+
+  .form-container .swiper-button-prev,  .form-container .swiper-button-next{
+    top: 50%;
+    transform: translateY(90px);
+  }
+
+  .swiper-pagination{
+    position: relative;
+    padding-top: 10px;
+  }
+
+  .row{
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .demoAvatar{
+    margin: auto;
+    overflow: hidden;
+    border: 3px solid gray;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+  }
+
+  .demoAvatar img{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* .form-container input[type="radio"] {
+    display: none;
+  }
+
+  .picture.selected {
+    border: 1px solid #f00;
+  } */
+
+
+
+/* Login Page */

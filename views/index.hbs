@@ -1,0 +1,63 @@
+
+<nav class="navbar navbar-default navbar-fixed-top navbar">
+
+<a id="userProfile" class="navbar-brand" href="#">
+    <img src="https://via.placeholder.com/30x30" class="rounded-circle mr-2" style="width: 60px;height:70px">
+    <span style="display: block;"></span>
+</a>
+
+</nav>
+<div class="container">
+<div class="row mt-3">
+    <div class="col-3">
+        <!-- A list users who are contacted with you-->
+        <ul class="list-group view-history" id="user-list">
+            <h4>Online user</h4>
+            {{!-- <li class="list-group-item text-center mt-2">
+                <a href="/error">
+                    <img src="https://via.placeholder.com/30x30" class="rounded-circle mr-2">
+                </a>
+                User 1
+            </li> --}}
+        </ul>
+        <!-- end of list user -->
+    </div>
+    <div class="col-9">
+        <div class="card" id="chat-panel">
+            <div class="card-header">
+                <a href="#">
+                    <img src="https://via.placeholder.com/30x30" class="rounded-circle mr-2">
+                </a>
+                <span>Chat with user 1</span>
+            </div>
+            <div class="card-body overflow-auto view-history" id="chatBox">
+                <div class="messages">
+                    <!-- Example outgoing message -->
+                    {{!-- <div class="message outgoing">
+                        <p>Hello, how are you?</p>
+                        <span class="time">11:35 AM</span>
+                    </div> --}}
+                    <div class="noUserSelected">Choose a user to chat with</div>
+                    <!-- Example incoming message -->
+                    {{!-- <div class="message incoming">
+                        <p>I'm good, thanks for asking. What about you?</p>
+                        <span class="time">11:37 AM</span>
+                    </div> --}}
+                
+                </div>
+            </div>
+            <div class="card-footer">
+                <form class="input-message">
+                    <div class="form-group typing-message">
+                        <input type="text" class="form-control form-control-plaintext" placeholder="Type your message...">
+                    </div>
+                    <button type="submit" class="btn btn-outline-dark btn-xs mx-3">
+                        <i class="fa-sharp fa-regular fa-paper-plane" style="color: #006cff;"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
